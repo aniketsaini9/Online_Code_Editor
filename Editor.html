@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="Editor.css">
+    <script src="Editor.js"></script>
+</head>
+<body>
+    
+    <div class="cont">
+        <div class="left">
+            <!-- using label to name the container -->
+            <label><i class="fa-brands fa-html5"></i>HTML
+                <button onclick="htmlcopy()">Copy</button>
+            </label>
+            <!-- using textarea to enter the code  -->
+            <textarea id="htmlcode" onkeyup="run()"><h1>Hello World</h1>
+             </textarea>
+            <label><i class="fa-brands fa-css3-alt"></i>CSS
+                <button onclick="csscopy()">Copy</button>
+            </label>
+            <textarea id="csscode" onkeyup="run()">
+            </textarea>
+            <label><i class="fa-brands fa-js"></i>JS
+                <button onclick="jscopy()">Copy</button></label>
+            <textarea id="jscode" onkeyup="run()">
+            </textarea>
+        </div>
+
+        <div class="right">
+            <label ><i class="fa-solid fa-code"></i>Output
+                <button onclick="btn()">Lock/Unlock</button>                
+                <button>Save</button>
+            </label>
+                <!-- using iframe tag to embed a web page inside
+                 a webpage to show the output. -->
+            <iframe id="frame"></iframe>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
